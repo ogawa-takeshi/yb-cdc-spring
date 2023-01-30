@@ -51,6 +51,12 @@
 			<groupId>io.debezium</groupId>
 			<artifactId>debezium-connector-yugabytedb</artifactId>
 			<version>1.9.5.y.15</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -109,20 +115,6 @@
 			<groupId>com.yugabyte</groupId>
 			<artifactId>jdbc-yugabytedb</artifactId>
 			<version>42.3.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.yb</groupId>
-			<artifactId>yb-client</artifactId>
-			<version>0.8.36-20221209.100718-1</version>
-			<type>test-jar</type>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.yb</groupId>
-			<artifactId>yb-cdc</artifactId>
-			<version>0.8.36-20221209.100718-1</version>
-			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
